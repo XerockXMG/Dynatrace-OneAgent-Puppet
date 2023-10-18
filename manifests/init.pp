@@ -159,9 +159,9 @@ class dynatraceoneagent (
 
 ) inherits dynatraceoneagent::params {
 
-    if $::kernel == 'Linux' {
+    if $facts['kernel'] == 'Linux' {
       $os_type = 'unix'
-    } elsif $::osfamily  == 'AIX' {
+    } elsif $facts['os']['family']  == 'AIX' {
       $os_type = 'aix'
     }
 
@@ -177,13 +177,13 @@ class dynatraceoneagent (
       $download_link  = "${tenant_url}${api_path}${os_type}/${installer_type}/version/${version}?Api-Token=${paas_token}&arch=${arch}"
     }
 
-    if $::osfamily == 'Windows' {
-      $filename                = "Dynatrace-OneAgent-${::osfamily}-${version}.exe"
+    if $facts['os']['family'] == 'Windows' {
+      $filename                = "Dynatrace-OneAgent-${facts['os']['family']}-${version}.exe"
       $download_path           = "${download_dir}\\${filename}"
       $created_dir             = "${install_dir}\\agent\\agent.state"
       $oneagent_tools_dir      = "${install_dir}\\agent\\tools"
-    } elsif ($::kernel == 'Linux') or ($::osfamily  == 'AIX') {
-      $filename                 = "Dynatrace-OneAgent-${::kernel}-${version}.sh"
+    } elsif ($facts['kernel'] == 'Linux') or ($facts['os']['family']  == 'AIX') {
+      $filename                 = "Dynatrace-OneAgent-${facts['kernel']}-${version}.sh"
       $download_path            = "${download_dir}/${filename}"
       $dt_root_cert             = "${download_dir}/${cert_file_name}"
       $oneagent_params_array    = $oneagent_params_hash.map |$key,$value| { "${key}=${value}" }

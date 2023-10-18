@@ -49,14 +49,14 @@ class dynatraceoneagent::config {
     $oneagent_communication_array        = $oneagent_communication_hash.map |$key,$value| { "${key}=${value}" }
     $oneagent_communication_params       = join($oneagent_communication_array, ' ' )
 
-    if ($::kernel == 'Linux') or ($::osfamily == 'AIX') {
+    if ($facts['kernel'] == 'Linux') or ($facts['os']['famly'] == 'AIX') {
       $oneagentctl_exec_path                 = ['/usr/bin/', $oneagent_tools_dir]
       $oneagent_remove_host_tags_command     = "${oactl} --get-host-tags | xargs -I{} ${oactl} --remove-host-tag={}"
       $oneagent_set_host_tags_command        = "${oneagent_remove_host_tags_command}; ${oactl} ${oneagent_set_host_tags_params}"
       $oneagent_remove_host_metadata_command = "${oactl} --get-host-properties | xargs -I{} ${oactl} --remove-host-property={}"
       $oneagent_set_host_metadata_command    = "${oneagent_remove_host_metadata_command}; ${oactl} ${oneagent_set_host_metadata_params}"
     }
-    elsif $::osfamily == 'Windows'{
+    elsif $facts['os']['family'] == 'Windows'{
       $oneagentctl_exec_path                 = [$dynatraceoneagent::params::windows_pwsh, $oneagent_tools_dir]
       $oneagent_remove_host_tags_command     = "powershell ${oactl} --get-host-tags | %{${oactl} --remove-host-tag=\$_}"
       $oneagent_set_host_tags_command        = "${oneagent_remove_host_tags_command}; ${oactl} ${oneagent_set_host_tags_params}"

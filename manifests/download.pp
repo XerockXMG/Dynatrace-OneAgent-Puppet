@@ -65,7 +65,7 @@ class dynatraceoneagent::download {
         command   => "rm ${$download_path} ${dynatraceoneagent::dt_root_cert}",
         cwd       => $download_dir,
         timeout   => 6000,
-        provider  => $provider,
+        #provider  => $provider,
         logoutput => on_failure,
         unless    => $verify_signature_command,
         require   => [

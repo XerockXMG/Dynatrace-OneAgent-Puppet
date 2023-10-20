@@ -15,7 +15,7 @@ class dynatraceoneagent::uninstall {
       exec { 'uninstall_oneagent':
         command   => "${install_dir}/agent/uninstall.sh",
         timeout   => 6000,
-        provider  => $provider,
+        #provider  => $provider,
         logoutput => on_failure,
       }
     } elsif $facts['os']['family'] == 'Windows' {

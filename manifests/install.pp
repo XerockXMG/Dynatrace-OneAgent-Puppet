@@ -20,7 +20,7 @@ class dynatraceoneagent::install {
         cwd       => $download_dir,
         timeout   => 6000,
         creates   => $created_dir,
-        provider  => $provider,
+        #provider  => $provider,
         logoutput => on_failure,
     }
   }

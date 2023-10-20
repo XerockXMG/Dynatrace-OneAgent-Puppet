@@ -191,7 +191,7 @@ class dynatraceoneagent::config {
         path        => $oneagentctl_exec_path,
         cwd         => $oneagent_tools_dir,
         timeout     => 6000,
-        provider    => $provider,
+        #provider    => $provider,
         logoutput   => on_failure,
         refreshonly => true,
     }
@@ -201,7 +201,7 @@ class dynatraceoneagent::config {
         path        => $oneagentctl_exec_path,
         cwd         => $oneagent_tools_dir,
         timeout     => 6000,
-        provider    => $provider,
+        #provider    => $provider,
         logoutput   => on_failure,
         refreshonly => true,
     }
@@ -211,7 +211,7 @@ class dynatraceoneagent::config {
         path        => $oneagentctl_exec_path,
         cwd         => $oneagent_tools_dir,
         timeout     => 6000,
-        provider    => $provider,
+        #provider    => $provider,
         logoutput   => on_failure,
         refreshonly => true,
     }
@@ -221,7 +221,7 @@ class dynatraceoneagent::config {
         path        => $oneagentctl_exec_path,
         cwd         => $oneagent_tools_dir,
         timeout     => 6000,
-        provider    => $provider,
+        #provider    => $provider,
         logoutput   => on_failure,
         refreshonly => true,
     }
@@ -231,7 +231,7 @@ class dynatraceoneagent::config {
         path        => $oneagentctl_exec_path,
         cwd         => $oneagent_tools_dir,
         timeout     => 6000,
-        provider    => $provider,
+        #provider    => $provider,
         logoutput   => on_failure,
         refreshonly => true,
     }
@@ -241,7 +241,7 @@ class dynatraceoneagent::config {
         path        => $oneagentctl_exec_path,
         cwd         => $oneagent_tools_dir,
         timeout     => 6000,
-        provider    => $provider,
+        #provider    => $provider,
         logoutput   => on_failure,
         refreshonly => true,
     }
@@ -251,7 +251,7 @@ class dynatraceoneagent::config {
         path        => $oneagentctl_exec_path,
         cwd         => $oneagent_tools_dir,
         timeout     => 6000,
-        provider    => $provider,
+        #provider    => $provider,
         logoutput   => on_failure,
         refreshonly => true,
     }
@@ -261,7 +261,7 @@ class dynatraceoneagent::config {
         path        => $oneagentctl_exec_path,
         cwd         => $oneagent_tools_dir,
         timeout     => 6000,
-        provider    => $provider,
+        #provider    => $provider,
         logoutput   => on_failure,
         refreshonly => true,
     }
@@ -271,7 +271,7 @@ class dynatraceoneagent::config {
         path        => $oneagentctl_exec_path,
         cwd         => $oneagent_tools_dir,
         timeout     => 6000,
-        provider    => $provider,
+        #provider    => $provider,
         logoutput   => on_failure,
         refreshonly => true,
     }
@@ -281,7 +281,7 @@ class dynatraceoneagent::config {
         path        => $oneagentctl_exec_path,
         cwd         => $oneagent_tools_dir,
         timeout     => 6000,
-        provider    => $provider,
+        #provider    => $provider,
         logoutput   => on_failure,
         refreshonly => true,
     }
@@ -291,7 +291,7 @@ class dynatraceoneagent::config {
         path        => $oneagentctl_exec_path,
         cwd         => $oneagent_tools_dir,
         timeout     => 6000,
-        provider    => $provider,
+        #provider    => $provider,
         logoutput   => on_failure,
         refreshonly => true,
     }
@@ -301,7 +301,7 @@ class dynatraceoneagent::config {
         path        => $oneagentctl_exec_path,
         cwd         => $oneagent_tools_dir,
         timeout     => 6000,
-        provider    => $provider,
+        #provider    => $provider,
         logoutput   => on_failure,
         refreshonly => true,
     }
@@ -311,7 +311,7 @@ class dynatraceoneagent::config {
         path        => $oneagentctl_exec_path,
         cwd         => $oneagent_tools_dir,
         timeout     => 6000,
-        provider    => $provider,
+        #provider    => $provider,
         logoutput   => on_failure,
         refreshonly => true,
     }
@@ -321,7 +321,7 @@ class dynatraceoneagent::config {
         path        => $oneagentctl_exec_path,
         cwd         => $oneagent_tools_dir,
         timeout     => 6000,
-        provider    => $provider,
+        #provider    => $provider,
         logoutput   => on_failure,
         refreshonly => true,
     }
